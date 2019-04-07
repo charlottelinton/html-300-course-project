@@ -1,0 +1,14 @@
+HTML 300 WEBSITE PROPOSAL
+
+For my course project this quarter I propose to create a website focused on
+sustainable sewing. The target audience will primarily be sewists and crafters,
+as well as those interested in sustainability in general. The site will feature
+articles about the subject, a gallery of projects, and a store of products. I
+want to build this site for the following reasons:
+•	It is a topic about which I am relatively knowledgeable, so I will easily be
+able to generate content.
+•	I can integrate different ways to display that content in order to demonstrate
+different programming skills e.g. a project gallery, a blog page.
+•	I can integrate an ecommerce aspect to the site by creating a store page.
+I would like to use the Google Custom Search API to make content and images
+on my site easily searchable for the user.
