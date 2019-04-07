@@ -12,3 +12,4 @@ different programming skills e.g. a project gallery, a blog page.
 •	I can integrate an ecommerce aspect to the site by creating a store page.
 I would like to use the Google Custom Search API to make content and images
 on my site easily searchable for the user.
+
