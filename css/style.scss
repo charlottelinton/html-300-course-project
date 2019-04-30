@@ -32,7 +32,7 @@
 }
 
 // Button laying over hero image
-// Inlcudes transition via mixin - button changes color (using color function) and regains corners on hover
+// Inlcudes transition via mixin - button darkens (using color function) and enlarges on hover
 .hero-button {
   @include transition(all,0.5s,ease-in-out);
   width: 30%;
@@ -48,9 +48,9 @@
   border: none;
   border-radius: 8px;
   &:hover {
-    background-color: complement($button-red);
-    border-radius: 0;
+    background-color: darken($button-red, 10%);
     cursor: pointer;
+    transform: scale(1.05);
   }
 }
 
