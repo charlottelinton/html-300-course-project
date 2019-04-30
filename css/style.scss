@@ -1,0 +1,135 @@
+@import 'page.settings';
+@import 'settings.variables';
+
+// Mixin for transitions
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition:    $what $time $how;
+  -ms-transition:     $what $time $how;
+  -o-transition:      $what $time $how;
+  transition:         $what $time $how;
+}
+
+// Banner image to cover top of page
+.hero-image {
+  background-image: url(../images/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 80%;
+  width: 100%;
+}
+
+// Text laying over hero image
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+// Button laying over hero image
+// Inlcudes transition via mixin - button changes color (using color function) and regains corners on hover
+.hero-button {
+  @include transition(all,0.5s,ease-in-out);
+  width: 30%;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: $button-red;
+  padding: 4px 30px 4px 30px;
+  border: none;
+  border-radius: 8px;
+  &:hover {
+    background-color: complement($button-red);
+    border-radius: 0;
+    cursor: pointer;
+  }
+}
+
+// Navigation settings
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0px 5px 0px $grey;
+  font-family: Montserrat;
+  ul {
+    list-style: none;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+  }
+}
+
+// Styling nav links
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: $grey;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: darken($grey, 40%);
+}
+
+// Stroke effect
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
