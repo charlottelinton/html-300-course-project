@@ -16,6 +16,15 @@ h1 {
   text-transform: uppercase;
 }
 
+main {
+  font-family: Montserrat;
+  font-size: 1em;
+  margin: 2em;
+  & h1 {
+    font-size: 2em;
+  }
+}
+
 .hero-text h1 {
   text-shadow: 2px 2px black;
 }

@@ -133,3 +133,18 @@ nav.fill ul li a:hover:after {
   -moz-animation: fill 1s forwards;
   opacity: 1;
 }
+
+.btn {
+  color: $grey;
+  &:hover {
+    color: darken($grey, 40%);
+  }
+}
+
+.card-header {
+  background-color: white;
+}
+
+.img-thumbnail {
+  margin: 1rem;
+}
